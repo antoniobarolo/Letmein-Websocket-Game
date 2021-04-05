@@ -1,0 +1,5 @@
+class Palavras{
+    function obter(){
+        
+    }
+}
