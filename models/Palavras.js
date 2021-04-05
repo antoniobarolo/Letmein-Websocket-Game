@@ -1,5 +1,5 @@
 class Palavras{
-    function obter(){
+    obter(){
         
     }
 }
