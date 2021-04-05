@@ -11,6 +11,9 @@ function IniciarCronometro() {
 }
 
 function ValidarPalpite() {
+    if(palpite == resposta){
+        AtualizarPontos(1)
+    }
 
 }
 
