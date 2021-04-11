@@ -1,5 +1,0 @@
-class Palavras{
-    obter(){
-        
-    }
-}

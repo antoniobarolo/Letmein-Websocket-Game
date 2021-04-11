@@ -1,24 +1,26 @@
 {
-  "name": "interdisciplinar3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "megasenha",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/antoniobarolo/interdisciplinar3.git"
+  "description": "megasenha",
+  "author": {
+    "name": "megasenha"
   },
-  "author": "antoniobarolo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/antoniobarolo/interdisciplinar3/issues"
-  },
-  "homepage": "https://github.com/antoniobarolo/interdisciplinar3#readme",
+  "main": "src/app.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "teem": ">=0.0.14",
+    "socket.io": "4.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.11",
+    "@types/express-serve-static-core": "4.17.18",
+    "@types/mysql": "2.15.17",
+    "@types/node": "14.14.21"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   }
 }
