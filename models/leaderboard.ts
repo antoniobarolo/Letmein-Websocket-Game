@@ -2,7 +2,8 @@ import app = require("teem");
 
 class Leaderboard {
 	public id: number;
-	public nome: string;
+	public nome1: string;
+	public nome2: string;
 	public pontuacao: number;
 
 	public static async listar(): Promise<Leaderboard[]> {
@@ -17,46 +18,54 @@ class Leaderboard {
 		return leaderboard;
 	}
 
-    private static validar(leaderboard: Leaderboard): string {
+	private static validar(leaderboard: Leaderboard): string {
 		if (!leaderboard) {
 			return "Dados inválidos!";
 		}
 
-		if (leaderboard.nome) {
-			leaderboard.nome = leaderboard.nome.trim();
+		if (leaderboard.nome1) {
+			leaderboard.nome1 = leaderboard.nome1.trim();
 		}
 
-		if (!leaderboard.nome) {
+		if (!leaderboard.nome1) {
 			return "Dados inválidos. Digite seu nickname.";
 		}
 
-		if (leaderboard.nome.length > 50) {
-			return "Nome muito longo";
+		if (leaderboard.nome2) {
+			leaderboard.nome2 = leaderboard.nome2.trim();
 		}
 
-        
+		if (!leaderboard.nome2) {
+			return "Dados inválidos. Digite seu nickname.";
+		}
 
+		if (leaderboard.nome1.length > 50) {
+			return "Nome muito longo";
+		}
+		if (leaderboard.nome2.length > 50) {
+			return "Nome muito longo";
+		}
 		return null;
 	}
 
-    public static async atualizar(leaderboard: Leaderboard) {
-       
-        // Apesar de querermos um número, pode ser que o cliente tenha enviado uma string...
-        leaderboard.id = parseInt(leaderboard.id as any);
+	public static async atualizar(leaderboard: Leaderboard) {
+
+		// Apesar de querermos um número, pode ser que o cliente tenha enviado uma string...
+		leaderboard.id = parseInt(leaderboard.id as any);
 
 		if (isNaN(leaderboard.id)) {
 			return "Id inválido";
 		}
 
-        await app.sql.connect(async (sql) => {
+		await app.sql.connect(async (sql) => {
 
-				await sql.query("UPDATE pessoa SET pontuacao = pontuacao + 1 WHERE id = ?", [leaderboard.id]);
-				
+			await sql.query("UPDATE pessoa SET pontuacao = pontuacao + 1 WHERE id = ?", [leaderboard.id]);
+
 		});
-        
-    }
 
-    public static async criar(leaderboard: Leaderboard): Promise<string> {
+	}
+
+	public static async criar(leaderboard: Leaderboard): Promise<string> {
 		let erro = Leaderboard.validar(leaderboard);
 
 		if (erro) {
@@ -66,12 +75,12 @@ class Leaderboard {
 		await app.sql.connect(async (sql) => {
 
 			try { //Tem que ver se a sintaxe está certa
-				await sql.query("INSERT INTO leaderboard (nome1, nome2, pontuacao) VALUES (?, ?, ?)", [leaderboard.nome]);
+				await sql.query("INSERT INTO leaderboard (nome1, nome2, pontuacao) VALUES (?, ?, ?)", [leaderboard.nome1, leaderboard.nome2, leaderboard.pontuacao], );
 
 				leaderboard.id = await sql.scalar("SELECT last_insert_id()");
 			} catch (e) {
 				if (e.code && e.code === "ER_DUP_ENTRY")
-					erro = `O time "${leaderboard.nome}" já existe`;
+					erro = `O time "${leaderboard.nome1}" e "${leaderboard.nome2}" já existe`;
 				else
 					throw e;
 			}
@@ -81,7 +90,7 @@ class Leaderboard {
 		return erro;
 	}
 
-    public static async reset (): Promise<string> {
+	public static async reset(): Promise<string> {
 		let erro: string = null;
 
 		await app.sql.connect(async (sql) => {
