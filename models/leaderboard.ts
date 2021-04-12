@@ -48,23 +48,6 @@ class Leaderboard {
 		return null;
 	}
 
-	public static async atualizar(leaderboard: Leaderboard) {
-
-		// Apesar de querermos um número, pode ser que o cliente tenha enviado uma string...
-		leaderboard.id = parseInt(leaderboard.id as any);
-
-		if (isNaN(leaderboard.id)) {
-			return "Id inválido";
-		}
-
-		await app.sql.connect(async (sql) => {
-
-			await sql.query("UPDATE pessoa SET pontuacao = pontuacao + 1 WHERE id = ?", [leaderboard.id]);
-
-		});
-
-	}
-
 	public static async criar(leaderboard: Leaderboard): Promise<string> {
 		let erro = Leaderboard.validar(leaderboard);
 
@@ -90,17 +73,6 @@ class Leaderboard {
 		return erro;
 	}
 
-	public static async reset(): Promise<string> {
-		let erro: string = null;
-
-		await app.sql.connect(async (sql) => {
-
-			await sql.query("TRUNCATE leaderboard");
-
-		});
-
-		return erro;
-	}
 }
 
 export = Leaderboard
