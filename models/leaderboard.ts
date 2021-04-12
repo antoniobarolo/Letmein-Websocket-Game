@@ -10,7 +10,7 @@ class Leaderboard {
 
 		await app.sql.connect(async (sql) => {
 
-			leaderboard = await sql.query("SELECT id, nome, pontuacao FROM leaderboard");
+			leaderboard = await sql.query("SELECT id, nome1, nome2, pontuacao FROM leaderboard");
 
 		});
 
@@ -66,7 +66,7 @@ class Leaderboard {
 		await app.sql.connect(async (sql) => {
 
 			try { //Tem que ver se a sintaxe está certa
-				await sql.query("INSERT INTO leaderboard (nome, pontuacao) VALUES (?, 0)", [leaderboard.nome]);
+				await sql.query("INSERT INTO leaderboard (nome1, nome2, pontuacao) VALUES (?, ?, ?)", [leaderboard.nome]);
 
 				leaderboard.id = await sql.scalar("SELECT last_insert_id()");
 			} catch (e) {

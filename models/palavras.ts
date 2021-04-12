@@ -9,7 +9,7 @@ class Palavras {
 
 		await app.sql.connect(async (sql) => {
 
-			let palavras: Palavras[] = await sql.query("SELECT id, palavra FROM palavras WHERE id = ?", [id]);
+			let palavras: Palavras[] = await sql.query("SELECT palavra FROM palavras WHERE id = ?", [id]);
 
 			if (palavras.length) {
 				palavra = palavras[0];

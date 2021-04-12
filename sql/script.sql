@@ -1,10 +1,18 @@
-CREATE DATABASE IF NOT EXISTS agenda;
-USE agenda;
+CREATE DATABASE IF NOT EXISTS interdisciplinar3;
+USE interdisciplinar3;
 
-CREATE TABLE pessoa (
+CREATE TABLE leaderboard (
   id int NOT NULL AUTO_INCREMENT,
-  nome varchar(50) NOT NULL,
-  email varchar(50) NOT NULL,
+  nome1 varchar(50) NOT NULL,
+  nome2 varchar(50) NOT NULL,
+  pontuacao int,
   PRIMARY KEY (id),
   UNIQUE KEY nome_UN (nome)
+)
+
+CREATE TABLE palavras(
+  id int NOT NULL AUTO_INCREMENT,
+  palavra varchar(30) NOT NULL,
+  dificuldade int NOT NULL,
+  PRIMARY KEY (id)
 );
