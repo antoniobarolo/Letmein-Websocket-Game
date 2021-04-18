@@ -4,7 +4,7 @@ class Leaderboard {
     static async listar() {
         let leaderboard = null;
         await app.sql.connect(async (sql) => {
-            leaderboard = await sql.query("SELECT id, nome, pontuacao FROM leaderboard");
+            leaderboard = await sql.query("SELECT id, nome1, nome2, pontuacao FROM leaderboard");
         });
         return leaderboard;
     }
@@ -12,26 +12,25 @@ class Leaderboard {
         if (!leaderboard) {
             return "Dados inválidos!";
         }
-        if (leaderboard.nome) {
-            leaderboard.nome = leaderboard.nome.trim();
+        if (leaderboard.nome1) {
+            leaderboard.nome1 = leaderboard.nome1.trim();
         }
-        if (!leaderboard.nome) {
+        if (!leaderboard.nome1) {
             return "Dados inválidos. Digite seu nickname.";
         }
-        if (leaderboard.nome.length > 50) {
+        if (leaderboard.nome2) {
+            leaderboard.nome2 = leaderboard.nome2.trim();
+        }
+        if (!leaderboard.nome2) {
+            return "Dados inválidos. Digite seu nickname.";
+        }
+        if (leaderboard.nome1.length > 50) {
+            return "Nome muito longo";
+        }
+        if (leaderboard.nome2.length > 50) {
             return "Nome muito longo";
         }
         return null;
-    }
-    static async atualizar(leaderboard) {
-        // Apesar de querermos um número, pode ser que o cliente tenha enviado uma string...
-        leaderboard.id = parseInt(leaderboard.id);
-        if (isNaN(leaderboard.id)) {
-            return "Id inválido";
-        }
-        await app.sql.connect(async (sql) => {
-            await sql.query("UPDATE pessoa SET pontuacao = pontuacao + 1 WHERE id = ?", [leaderboard.id]);
-        });
     }
     static async criar(leaderboard) {
         let erro = Leaderboard.validar(leaderboard);
@@ -40,22 +39,15 @@ class Leaderboard {
         }
         await app.sql.connect(async (sql) => {
             try { //Tem que ver se a sintaxe está certa
-                await sql.query("INSERT INTO leaderboard (nome, pontuacao) VALUES (?, 0)", [leaderboard.nome]);
+                await sql.query("INSERT INTO leaderboard (nome1, nome2, pontuacao) VALUES (?, ?, ?)", [leaderboard.nome1, leaderboard.nome2, leaderboard.pontuacao]);
                 leaderboard.id = await sql.scalar("SELECT last_insert_id()");
             }
             catch (e) {
                 if (e.code && e.code === "ER_DUP_ENTRY")
-                    erro = `O time "${leaderboard.nome}" já existe`;
+                    erro = `O time "${leaderboard.nome1}" e "${leaderboard.nome2}" já existe`;
                 else
                     throw e;
             }
-        });
-        return erro;
-    }
-    static async reset() {
-        let erro = null;
-        await app.sql.connect(async (sql) => {
-            await sql.query("TRUNCATE leaderboard");
         });
         return erro;
     }

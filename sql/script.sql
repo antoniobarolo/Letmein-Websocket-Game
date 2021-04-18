@@ -6,9 +6,7 @@ CREATE TABLE leaderboard (
   nome1 varchar(50) NOT NULL,
   nome2 varchar(50) NOT NULL,
   pontuacao int,
-  PRIMARY KEY (id),
-  UNIQUE KEY nome_UN1 (nome1),
-  UNIQUE KEY nome_UN2 (nome2),
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE palavras(

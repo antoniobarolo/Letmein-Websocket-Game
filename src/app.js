@@ -19,7 +19,7 @@ app.run({
         const io = new socketio.Server(server);
         io.on("connection", async function (socket) {
             console.log("New user connected");
-            // await Pessoa.xxx();
+            // await Leaderboard.xxx();
         });
         server.listen(app.port, app.localIp, function () {
             console.log(`Server listening on ${app.localIp}:${app.port}`);
