@@ -64,7 +64,7 @@ body {
   }
   
   .Timer {
-    float: left;
+    float: right;
     font-size: 38px;
     border: solid blueviolet;
     border-width: 3px;
@@ -77,16 +77,16 @@ body {
     font-size: 38px;
     border: solid blueviolet;
     border-width: 3px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
   }
   .Acertos{
-    float: right;
+    float: left;
     font-size: 38px;
     border: solid blueviolet;
     border-width: 3px;
     margin-left: 0%;
-    margin-right: 2%;
+    margin-right: 0%;
   }
   
   input{
