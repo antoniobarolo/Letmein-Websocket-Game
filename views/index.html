@@ -1,54 +1,87 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-<!-- Bootstrap 3 -->
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<!-- Font Awesome 4.7 -->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <!-- Font Awesome 4.7 -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-      <div id = "topo"> 
-       
+  <header>
+
+    <nav>
       <div class="logo">
-            <img src="logo3.png" alt="logo.jpg" width="240">
+        <img src="logo3.png" alt="logo.jpg" width="240">
       </div>
-      
-      <nav>   
-        <div class="timer">
-          Tempo
-       </div> 
-           <ul id="icones">
-           <li > Home
-           </li>
-           <li> Ajuda
-           </li>
-           <li> Desistir 
-           </li>
-           </ul>
-        </nav>
-      </div> 
-      <script type="text/javascript" src="/public/libs/jquery/jquery-3.5.1.min.js"></script>
-      <script type="text/javascript" src="/public/libs/validate/jquery.validate.min.js"></script>
-      <script type="text/javascript" src="/public/libs/validate/additional-methods.min.js"></script>
-      <script type="text/javascript" src="/public/libs/validate/localization/messages_pt_BR.min.js"></script>
-      <script type="text/javascript" src="/public/libs/socket.io/socket.io.min.js"></script>
-    
-      <script type="text/javascript">
-        const socket = io();
-        
-      </script>
+
+      <ul id="icones">
+        <li> <a href="ajuda.html">Ajuda</a>
+        </li>
+        <li> <a href="scoreboard.html">Scoreboard</a>
+        </li>
+        <li> <a href="index.html">Home</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+
+      <main>
+        <div class="Avisos">
+          <p id="avisos"></p>
+        </div>
+
+        <div class="Timer">
+          <p id="cronometro"></p>
+        </div>
+
+        <div class="Palavra">
+          <p id="palavra"></p>
+        </div>
+
+        <div class=Acertos>
+
+        </div>
+
+        <div class="Palpite">
+          <p id="palpite">
+          </p>
+
+          <div class="Dica">
+            <p id="dica">
+            </p>
+
+            <ul id="botoes">
+              <li> <button>Pular</button>
+              </li>
+              <li> <button>Desistir</button>
+              </li>
+            </ul>
+          </div>
+      </main>
+</body>
+
+<script type="text/javascript" src="/public/libs/jquery/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/public/libs/socket.io/socket.io.min.js"></script>
+
+<script type="text/javascript">
+  const socket = io();
+
+</script>
 
 </body>
+
 </html>

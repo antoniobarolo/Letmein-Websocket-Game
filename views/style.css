@@ -11,17 +11,17 @@ nav {
  display: block;
 }
 
-#topo{
+header{
       height: 150px;
       
   }
-#topo .logo{
+header .logo{
      float: left;
      margin-left: 30px;
      margin-top: 30px;
    background-size: cover;
   }
-#topo nav .timer{
+header nav .timer{
 font-size: 24px;
 margin: 50px 25px 0 0;
 padding: 0;
@@ -31,18 +31,18 @@ line-height: 38px;
 text-align: center;
 
 }
- #topo nav ul#icones {
+ header nav ul#icones {
      
  float: right;
 
   }
-#topo nav ul{
+header nav ul{
  float: left;
  margin: 50px 25px 0 0;
  padding: 0;
  list-style:none;
 }
-#topo nav ul#icones li{ 
+header nav ul#icones li{ 
 cursor: pointer;
  float: left;
  font-family: sala;
