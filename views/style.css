@@ -48,13 +48,11 @@ body {
     padding: 30px;
   }
   #tela{
-    position: absolute;
     border: double 5px;
-    top: 50vh;
-    left: 50vw;
-    width: 1145px;
-    height: 580px;
-    margin-left: -80px;
+    width: 80vw;
+    height: 80vh;
+    margin-left: 8vw;
+
   }
   main div{
     text-align: center;
