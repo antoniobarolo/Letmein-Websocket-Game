@@ -66,9 +66,8 @@ body {
   }
   
   .Timer {
-    float: center;
-    margin-left: 40%;
-    margin-right: 40%;
+    float: right;
+    
     font-size: 38px;
     border: solid blueviolet;
     border-width: 3px;
