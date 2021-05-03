@@ -50,8 +50,8 @@ body {
   #tela{
     position: absolute;
     border: double 5px;
-    top: 15%;
-    left: 15%;
+    top: 50vh;
+    left: 50vw;
     width: 1145px;
     height: 580px;
     margin-left: -80px;
@@ -66,19 +66,29 @@ body {
   }
   
   .Timer {
-    float: right;
-    
+    float: left;
     font-size: 38px;
     border: solid blueviolet;
     border-width: 3px;
+    margin-left: 2%;
+    margin-right: 0%;
   }
 
   .Palavra{
-    margin-left: 40%;
-    margin-right: 40%;
-    font-size: 28px;
-    border: solid white;
+    float: center;
+    font-size: 38px;
+    border: solid blueviolet;
     border-width: 3px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .Acertos{
+    float: right;
+    font-size: 38px;
+    border: solid blueviolet;
+    border-width: 3px;
+    margin-left: 0%;
+    margin-right: 2%;
   }
   
   input{
