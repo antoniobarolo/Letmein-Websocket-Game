@@ -47,7 +47,15 @@ body {
     max-height: 70vh;
     padding: 30px;
   }
-  
+  #tela{
+    position: absolute;
+    border: double 5px;
+    top: 15%;
+    left: 15%;
+    width: 1145px;
+    height: 580px;
+    margin-left: -80px;
+  }
   main div{
     text-align: center;
     padding: 10px;
