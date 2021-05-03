@@ -38,6 +38,11 @@ main {
 	text-align: center;
 }
 
+.nome{
+	color: cornflowerblue;
+	padding: 5px;
+}
+
 #tela {
 	border: double 5px;
 	width: 60vw;
@@ -82,7 +87,7 @@ main {
 	padding: 10px;
 }
 
-input {
+.meio input {
 	color: black;
 	height: 10vh;
 	font-size: 24px;
