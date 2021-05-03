@@ -1,39 +1,54 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-	<title>Megasenha</title>
+<!-- Bootstrap 3 -->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+<!-- Font Awesome 4.7 -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+      <div id = "topo"> 
+       
+      <div class="logo">
+            <img src="logo3.png" alt="logo.jpg" width="240">
+      </div>
+      
+      <nav>   
+        <div class="timer">
+          Tempo
+       </div> 
+           <ul id="icones">
+           <li > Home
+           </li>
+           <li> Ajuda
+           </li>
+           <li> Desistir 
+           </li>
+           </ul>
+        </nav>
+      </div> 
+      <script type="text/javascript" src="/public/libs/jquery/jquery-3.5.1.min.js"></script>
+      <script type="text/javascript" src="/public/libs/validate/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="/public/libs/validate/additional-methods.min.js"></script>
+      <script type="text/javascript" src="/public/libs/validate/localization/messages_pt_BR.min.js"></script>
+      <script type="text/javascript" src="/public/libs/socket.io/socket.io.min.js"></script>
+    
+      <script type="text/javascript">
+        const socket = io();
+        
+      </script>
 
-	<h1>Megasenha</h1>
-
-	<!--
-		Referência sobre jQuery.ajax
-		https://api.jquery.com/jquery.ajax/
-
-		Referências sobre jQuery Validate 1.19
-		https://jqueryvalidation.org/documentation/
-		https://jqueryvalidation.org/documentation/#link-list-of-built-in-validation-methods
-		https://jqueryvalidation.org/validate/
-		https://jqueryvalidation.org/reference/
-
-		Referências sobre socket.io no cliente
-		https://socket.io/docs/v4/client-initialization/
-	-->
-	<script type="text/javascript" src="/public/libs/jquery/jquery-3.5.1.min.js"></script>
-	<script type="text/javascript" src="/public/libs/validate/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="/public/libs/validate/additional-methods.min.js"></script>
-	<script type="text/javascript" src="/public/libs/validate/localization/messages_pt_BR.min.js"></script>
-	<script type="text/javascript" src="/public/libs/socket.io/socket.io.min.js"></script>
-
-	<script type="text/javascript">
-		const socket = io();
-		
-	</script>
 </body>
 </html>

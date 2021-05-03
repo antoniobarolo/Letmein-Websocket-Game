@@ -1,0 +1,57 @@
+body{
+    background-color: black; 
+    color: white;
+ text-align: center;
+
+  }
+div {
+ display: block;
+}
+nav {
+ display: block;
+}
+
+#topo{
+      height: 150px;
+      
+  }
+#topo .logo{
+     float: left;
+     margin-left: 30px;
+     margin-top: 30px;
+   background-size: cover;
+  }
+#topo nav .timer{
+font-size: 24px;
+margin: 50px 25px 0 0;
+padding: 0;
+float: left;
+height: 38px;
+line-height: 38px;
+text-align: center;
+
+}
+ #topo nav ul#icones {
+     
+ float: right;
+
+  }
+#topo nav ul{
+ float: left;
+ margin: 50px 25px 0 0;
+ padding: 0;
+ list-style:none;
+}
+#topo nav ul#icones li{ 
+cursor: pointer;
+ float: left;
+ font-family: sala;
+ font-size: 24px;
+ height: 38px;
+ line-height: 38px;
+ margin: 0;
+ position: relative;
+ text-align: center;
+ width: 60px;  
+ margin: 0px 40px 0 0;
+}
