@@ -1,6 +1,10 @@
 let tempo = 0
 
-function Iniciar(duracao) {
+function IniciarTempoPausa(){
+    
+}
+
+function IniciarTempoJogo(duracao) {
     tempo = duracao
     setInterval(function () {
         tempo--;
