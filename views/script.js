@@ -4,10 +4,18 @@ var round;
 var nome1, nome2;
 var papel;
 
+var JogoLigado = false;
+
+// const socket = io();
+
 function BotaoIniciar(){
+    if(JogoLigado){
+        return
+    }
     //pega os nomes e guarda
     //define aleatoriamente qm vai ser quem
     //muda a tela do jogo
+    JogoLigado = true;
     IniciarTempoPausa()
 }
 

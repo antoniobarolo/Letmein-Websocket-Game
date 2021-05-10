@@ -1,14 +1,14 @@
-let tempo = 0
+const tempoPorRound = 5
+let tempo = tempoPorRound
 
 function IniciarTempoPausa(){
-    
+    IniciarTempoJogo()
 }
 
-function IniciarTempoJogo(duracao) {
-    tempo = duracao
+function IniciarTempoJogo() {
     setInterval(function () {
         tempo--;
-        $("#tempo").text(tempo)
+        $("#cronometro").text(tempo)
         if (tempo == 0) {
             FinalizarCronometro()
             $("body").css("background-color", "lightgray")
@@ -18,5 +18,7 @@ function IniciarTempoJogo(duracao) {
 }
 
 function FinalizarCronometro(){
-    
+    tempo = tempoPorRound
+    $("#cronometro").text(tempo)
+    JogoLigado = false;
 }
