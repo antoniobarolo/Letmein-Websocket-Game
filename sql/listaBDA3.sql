@@ -1,0 +1,83 @@
+
+
+lista "LISTAS" "dificuldade 3"
+
+INSERT INTO PALAVRAS(1, 'bule', 3);
+
+INSERT INTO PALAVRAS(2, 'ler', 3);
+
+INSERT INTO PALAVRAS(3, 'lagartixa', 3);
+
+INSERT INTO PALAVRAS(4, 'vidro', 3);
+
+INSERT INTO PALAVRAS(5, 'dançar', 3);
+
+INSERT INTO PALAVRAS(6, 'estudar', 3);
+
+INSERT INTO PALAVRAS(7, 'brincar', 3);
+
+INSERT INTO PALAVRAS(8, 'amar', 3);
+
+INSERT INTO PALAVRAS(9, 'descobrir', 3);
+
+INSERT INTO PALAVRAS(10, 'futuro', 3);
+
+INSERT INTO PALAVRAS(11, 'julgar', 3);
+
+INSERT INTO PALAVRAS(12, 'digitar', 3);
+
+INSERT INTO PALAVRAS(13, 'escutar', 3);
+
+INSERT INTO PALAVRAS(14, 'perder', 3);
+
+INSERT INTO PALAVRAS(15, 'guiar', 3);
+
+INSERT INTO PALAVRAS(16, 'conduz', 2);
+
+INSERT INTO PALAVRAS(17, 'paciência', 3);
+
+INSERT INTO PALAVRAS(18, 'apostar', 3);
+
+INSERT INTO PALAVRAS(19, 'passar', 3);
+
+INSERT INTO PALAVRAS(20, 'missão', 3);
+
+INSERT INTO PALAVRAS(21, 'açougue', 3);
+
+INSERT INTO PALAVRAS(22, 'esquecer', 3);
+
+INSERT INTO PALAVRAS(23, 'voltar', 3);
+
+INSERT INTO PALAVRAS(24, 'pulmão', 3);
+
+INSERT INTO PALAVRAS(25, 'sozinho', 3);
+
+INSERT INTO PALAVRAS(26, 'financiar', 3);
+
+INSERT INTO PALAVRAS(27, 'balcão', 3);
+
+INSERT INTO PALAVRAS(28, 'lava', 3);
+
+INSERT INTO PALAVRAS(29, 'declaração', 3);
+
+INSERT INTO PALAVRAS(30, 'piscina', 3);
+
+INSERT INTO PALAVRAS(31, 'louca', 3);
+
+INSERT INTO PALAVRAS(32, 'soldado', 3);
+
+INSERT INTO PALAVRAS(33, 'pista', 3);
+
+INSERT INTO PALAVRAS(34, 'dinheiro', 3);
+
+INSERT INTO PALAVRAS(35, 'segredo', 3);
+
+INSERT INTO PALAVRAS(36, 'fé', 3);
+
+INSERT INTO PALAVRAS(37, 'ré', 3);
+
+INSERT INTO PALAVRAS(38, 'contar', 3);
+
+INSERT INTO PALAVRAS(39, 'infarto', 3);
+
+INSERT INTO PALAVRAS(40, 'ajudar', 3);

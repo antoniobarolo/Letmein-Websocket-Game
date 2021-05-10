@@ -1,0 +1,84 @@
+
+
+lista "LISTAS" "dificuldade 2"
+
+INSERT INTO PALAVRAS(1, 'sunga', 2);
+
+INSERT INTO PALAVRAS(2, 'batata', 2);
+
+INSERT INTO PALAVRAS(3, 'boia', 2);
+
+INSERT INTO PALAVRAS(4, 'bexiga', 2);
+
+INSERT INTO PALAVRAS(5, 'baú', 2);
+
+INSERT INTO PALAVRAS(6, 'azeite', 2);
+
+INSERT INTO PALAVRAS(7, 'açucar', 2);
+
+INSERT INTO PALAVRAS(8, 'andar', 2);
+
+INSERT INTO PALAVRAS(9, 'cinema', 2);
+
+INSERT INTO PALAVRAS(10, 'caixa', 2);
+
+INSERT INTO PALAVRAS(11, 'sanduiche', 2);
+
+INSERT INTO PALAVRAS(12, 'chinelo', 2);
+
+INSERT INTO PALAVRAS(13, 'mochila', 2);
+
+INSERT INTO PALAVRAS(14, 'chorar', 2);
+
+INSERT INTO PALAVRAS(15, 'bala', 2);
+
+INSERT INTO PALAVRAS(16, 'bruxa', 2);
+
+INSERT INTO PALAVRAS(17, 'canudo', 2);
+
+INSERT INTO PALAVRAS(18, 'cogumelo', 2);
+
+INSERT INTO PALAVRAS(19, 'lixo', 2);
+
+INSERT INTO PALAVRAS(20, 'boneca', 2);
+
+INSERT INTO PALAVRAS(21, 'buzina', 2);
+
+INSERT INTO PALAVRAS(22, 'baleia', 2);
+
+INSERT INTO PALAVRAS(23, 'nadar', 2);
+
+INSERT INTO PALAVRAS(24, 'dormir', 2);
+
+INSERT INTO PALAVRAS(25, 'lua', 2);
+
+INSERT INTO PALAVRAS(26, 'leoa', 2);
+
+INSERT INTO PALAVRAS(27, 'lavar', 2);
+
+INSERT INTO PALAVRAS(28, 'luva', 2);
+
+INSERT INTO PALAVRAS(29, 'lixa', 2);
+
+INSERT INTO PALAVRAS(30, 'leite', 2);
+
+INSERT INTO PALAVRAS(31, 'limonada', 2);
+
+INSERT INTO PALAVRAS(32, 'lobo', 2);
+
+INSERT INTO PALAVRAS(33, 'ovelha', 2);
+
+INSERT INTO PALAVRAS(34, 'urso', 2);
+
+INSERT INTO PALAVRAS(35, 'porta', 2);
+
+INSERT INTO PALAVRAS(36, 'sorvete', 2);
+
+INSERT INTO PALAVRAS(37, 'caderno', 2);
+
+INSERT INTO PALAVRAS(38, 'carteira', 2);
+
+INSERT INTO PALAVRAS(39, 'circo', 2);
+
+INSERT INTO PALAVRAS(40, 'elevador', 2);
+
