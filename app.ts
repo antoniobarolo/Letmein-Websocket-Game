@@ -3,6 +3,7 @@ import http = require("http");
 import socketio = require("socket.io");
 
 import Pessoa = require("./models/pessoa");
+import Jogador = require("./models/jogador");
 
 app.run({
 	sqlConfig: {
@@ -23,6 +24,7 @@ app.run({
 
         io.on("connection", async function (socket: socketio.Socket) {
             console.log("New user connected");
+			Jogador.criarJogador(socket);
 			// await Pessoa.xxx();
         });
 
