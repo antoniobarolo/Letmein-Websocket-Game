@@ -4,7 +4,7 @@ body {
 }
 
 header {
-	padding: 20px;
+	padding: 10px;
 	height: 20vh;
 }
 
@@ -33,7 +33,7 @@ nav a {
 }
 
 main {
-	padding: 30px;
+	padding: 0px;
 	font-size: 18px;
 	text-align: center;
 }
@@ -46,7 +46,7 @@ main {
 #tela {
 	border: double 5px;
 	width: 60vw;
-	height: 70vh;
+	height: 65vh;
 	margin: 0 auto;
 }
 
@@ -82,17 +82,19 @@ main {
 }
 
 .meio{
-	height: 30%;
+	height: 25%;
 	margin: 0 auto;
 	padding: 10px;
 }
 
 .meio input {
 	color: black;
-	height: 10vh;
+	height: 20vh;
 	font-size: 24px;
 	text-align: center;
 	margin: 30px;
+box-sizing: border-box;
+
 }
 
 .base{
@@ -106,7 +108,8 @@ main {
 }
 
 .base li {
-	display: inline;
+	display: inline-block;
+	padding-top: 10vh;
 	margin: 50px;
 }
 
@@ -117,9 +120,5 @@ nav a {
 	text-decoration: none;
 }
 
-.Botoes {
-	list-style: none;
-	display: inline;
-	text-align: justify;
-}
+
 
