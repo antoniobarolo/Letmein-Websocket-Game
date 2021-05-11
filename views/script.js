@@ -24,7 +24,14 @@ function MontarTela(){
 }
 
 function MostrarPalavra(){
+    $("#palavra").text(palavra)
+}
 
+function ValidarPalavra(){
+    if ($("#palpite").val() == palavra){
+        SetPontos()
+        MostrarPalavra()
+    }
 }
 
 $("#botao-validar").on("click", function ValidarPalavra(){
