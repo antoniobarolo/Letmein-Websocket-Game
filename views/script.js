@@ -52,3 +52,11 @@ $("#palpite").on("input", function (){$("#resposta").text("Hmm...")})
 function SetPontos(){
     parseInt($("#pontos").text(pontos))
 }
+
+function BotaoDesistir(){
+
+}
+
+function BotaoPular(){
+    
+}
