@@ -22,7 +22,6 @@
   <link rel="stylesheet" href="../public/css/style.css">
 
 </head>
-
 <body>
   <header>
 
@@ -40,7 +39,8 @@
 
   <main>
 
-    <p class="nome">Diga seu nome: <input type="text"> <button id="button-iniciar" onclick=BotaoIniciar()>Iniciar</button></p>
+    <p class="nome">Diga seu nome: <input type="text"> <button id="button-iniciar"
+        onclick="BotaoIniciar()">Iniciar</button></p>
 
     <div id=tela>
       <section class="topo">
@@ -75,23 +75,21 @@
           <li>
             <button id="button-desistir">Desistir</button>
           </li>
-          </ul>
+        </ul>
       </section>
     </div>
-
     </div>
   </main>
 </body>
+<script>
+  
+</script>
 
 <script type="text/javascript" src="../public/libs/jquery/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="../public/libs/socket.io/socket.io.min.js"></script>
 <script src="script.js"></script>
 <script src="cronometro.js"></script>
-<script src="socket.js"></script>
 
-<script type="text/javascript">
-  const socket = io();
-  
-</script>
 </body>
+
 </html>

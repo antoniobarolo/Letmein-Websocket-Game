@@ -11,8 +11,8 @@ function IniciarTempoJogo() {
         $("#cronometro").text(tempo)
         if (tempo == 0) {
             FinalizarCronometro()
-            $("body").css("background-color", "lightgray")
-            tempo = 5
+            //$("body").css("background-color", "lightgray")
+            tempo = 10
         }
     }, 1000)
 }

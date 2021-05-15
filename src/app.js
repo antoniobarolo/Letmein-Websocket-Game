@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const app = require("teem");
 const http = require("http");
 const socketio = require("socket.io");
+const Jogador = require("./models/jogador");
 app.run({
     sqlConfig: {
         connectionLimit: 30,
@@ -19,6 +20,7 @@ app.run({
         const io = new socketio.Server(server);
         io.on("connection", async function (socket) {
             console.log("New user connected");
+            Jogador.criarJogador(socket);
             // await Pessoa.xxx();
         });
         server.listen(app.port, app.localIp, function () {
