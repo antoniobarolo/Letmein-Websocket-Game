@@ -1,6 +1,6 @@
 var palavra = $(".palavra").text()
 var pontos = 0
-var round;
+var round = 0;
 var nome1, nome2;
 var papel;
 
@@ -16,7 +16,7 @@ function BotaoIniciar(){
     //define aleatoriamente qm vai ser quem
     //muda a tela do jogo
     JogoLigado = true;
-    IniciarTempoPausa()
+    IniciarTempoEspera()
 }
 
 function MontarTela(){
