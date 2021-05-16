@@ -45,4 +45,5 @@ function FinalizarCronometro() {
 function FinalizarJogo() {
     $("#avisos").text('Jogo finalizado. Bom trabalho!')
     JogoLigado = false;
+    //Método! passar os pontos pro leaderboard
 }

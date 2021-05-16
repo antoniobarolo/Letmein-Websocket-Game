@@ -24,6 +24,7 @@ function MontarTela(){
 }
 
 function MostrarPalavra(){
+    //Método! Obter Palavra
     $("#palavra").text(palavra)
 }
 
@@ -54,9 +55,9 @@ function SetPontos(){
 }
 
 function BotaoDesistir(){
-
+    FinalizarJogo()
 }
 
 function BotaoPular(){
-    
+    MostrarPalavra()
 }
