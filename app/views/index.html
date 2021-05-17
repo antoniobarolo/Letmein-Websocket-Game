@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome 4.7 -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letmein!! - Palpiteiro</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+
+</head>
+<body>
+  <header>
+
+    <div class="caixa">
+      <h1><img src="../public/imagens/letmein.png" alt="letmein.png" height=100px></h1>
+      <nav>
+        <ul>
+          <li> <a href="ajuda.html">Ajuda</a></li>
+          <li> <a href="scoreboard.html">Scoreboard</a></li>
+          <li> <a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <p class="nome">Diga seu nome: <input type="text"> <button id="button-iniciar"
+        onclick="BotaoIniciar()">Iniciar</button></p>
+
+    <div id=tela>
+      <section class="topo">
+        <div class="Acertos">
+          <p>0 Pontos</p>
+        </div>
+
+        <div class="Palavra">
+          <p id="palavra">Resposta ???</p>
+        </div>
+
+        <div class="Timer">
+          <p id="cronometro">00:30</p>
+        </div>
+      </section>
+
+      <section class="meio">
+
+        <input id="dica" placeholder="Dica da sua dupla"></input>
+        <input type="text" id="palpite" placeholder="Digite seu palpite"></input>
+
+      </section>
+
+      <section class="base">
+        <ul class="botoes">
+          <li>
+            <button id="button-pular">Pular</button>
+          </li>
+          <li>
+            <p id="avisos">Você será o Palpiteiro!</p>
+          </li>
+          <li>
+            <button id="button-desistir">Desistir</button>
+          </li>
+        </ul>
+      </section>
+    </div>
+    </div>
+  </main>
+<script type="text/javascript" src="../public/libs/jquery/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../public/libs/socket.io/socket.io.min.js"></script>
+<script src="../public/scripts/cronometro.js"></script>
+<script src="../public/scripts/script.js"></script>
+</body>
+
+</html>
