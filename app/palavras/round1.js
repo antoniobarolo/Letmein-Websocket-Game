@@ -1,7 +1,6 @@
+var palavras1 = [ "casa", "cerveja"];
 
-
-lista "LISTAS" "dificuldade 1"
-
+/*
 INSERT INTO PALAVRAS(1, 'casa', 1);
 
 INSERT INTO PALAVRAS(2, 'cerveja', 1);
@@ -75,3 +74,5 @@ INSERT INTO PALAVRAS(35, 'nariz', 1);
 INSERT INTO PALAVRAS(36, 'ouvido', 1);
 
 INSERT INTO PALAVRAS(37, 'tênis', 1);
+
+*/
