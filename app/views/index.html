@@ -36,7 +36,7 @@
 
   <main>
 
-    <p class="nome">Diga seu nome: <input type="text"> <button id="button-iniciar" onclick="enviar()">Iniciar</button>
+    <p class="nome">Diga seu nome: <input type="text"> <button id="button-iniciar" onclick="botaoIniciar()">Iniciar</button>
     </p>
 
     <div id=tela>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="Timer">
-          <p id="cronometro">00:30</p>
+          <p id="cronometro">00:??</p>
         </div>
       </section>
 
@@ -79,10 +79,12 @@
   </main>
   <script type="text/javascript" src="../public/libs/jquery/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="../public/libs/socket.io/socket.io.min.js"></script>
-  <script src="../scripts/cronometro.js"></script>
-  <script src="../scripts/script.js"></script>
   <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
   <script defer src="../app.js"></script>
+  <script src="../scripts/script.js"></script>
+  <script src="../scripts/botoes.js"></script>
+  <script src="../scripts/cronometro.js"></script>
+  <script src="../scripts/palavra.js"></script>
 </body>
 
 </html>

@@ -1,45 +1,61 @@
-const tempoPorRound = 10
-const tempoEspera = 5
+const constTempoEspera = 5;
+const constTempoRound = 12;
 
-function cronometro(tempo) {
-    a = setInterval(function () {
-        if (tempo >= 10) {
-            $("#cronometro").text('00:' + tempo)
-        }
-        else {
-            $("#cronometro").text('00:0' + tempo)
-        }
-        tempo--
-        if (tempo <= 0) {
-            clearInterval(a)
-            IniciarTempoJogo()
-        }
-    }, 1000)
-}
 
-function IniciarTempoEspera() {
+function proximoRound() {
     if (round > 4) {
-        FinalizarJogo()
+        finalizarJogo()
         return
     }
-    $("#avisos").text('Prepare-se!')
-    cronometro(tempoEspera)    
-
+    let tempoEspera = 5;
+    let tempoRound = 12;
+    setTimeout(iniciarTempoEspera(tempoEspera), 1000);
 }
 
-function IniciarTempoJogo() {
-    console.log('masa')
+function iniciarTempoEspera(tempo) {
+    $("#avisos").text('Prepare-se!')
+    if (tempo >= 10) {
+        $("#cronometro").text('00:' + tempo)
+    }
+    else {
+        $("#cronometro").text('00:0' + tempo)
+    }
+    tempo--;
+
+    if (tempo <= 0) {
+        $("#cronometro").text('00:00')
+        setTimeout(iniciarTempoJogo(tempoRound), 1000)
+    } else {
+        setTimeout(iniciarTempoEspera(tempoEspera), 1000)
+    }
+}
+
+
+function iniciarTempoJogo(tempo) {
     $("#avisos").text('Rodada atual: ' + round)
-    cronometro(tempoPorRound)
-   
+    if (tempo >= 10) {
+        $("#cronometro").text('00:' + tempo)
+    }
+    else {
+        $("#cronometro").text('00:0' + tempo)
+    }
+    tempo--;
+
+    if (tempo <= 0) {
+        FinalizarCronometro()
+    } else {
+        setTimeout(iniciarTempoJogo(tempoRound), 1000)
+    }
 }
 
 function FinalizarCronometro() {
-    //$("body").css("background-color", "lightgray")
+    $("body").css("background-color", "lightgray")
+    /*
     round++
     $("#avisos").text('O tempo acabou!')
     setInterval(2000)
-    IniciarTempoEspera()
+    iniciarTempoEspera()
+    */
 }
 
 function FinalizarJogo() {
@@ -47,38 +63,3 @@ function FinalizarJogo() {
     JogoLigado = false;
     //Método! passar os pontos pro leaderboard
 }
-
-/* Rafa
-var preCont, cont;
-
-function proximoRound() {
-	....
-	preCont = 4;
-	cont = 30;
-	setTimeout(preEspera, 1000);
-}
-
-function preEspera() {
-	preCont--;
-	if (preCont <= 0) {
-		...
-		document.getElementById("contador").textContent = "30";
-		setTimeout(subtrairContador, 1000);
-	} else {
-		document.getElementById("contador").textContent = preCont;
-		setTimeout(preEspera, 1000);
-	}
-}
-
-function subtrairContador() {
-	cont--;
-	if (cont <= 0) {
-		... game over???
-	} else {
-		document.getElementById("contador").textContent = cont;
-		setTimeout(subtrairContador, 1000);
-	}
-}
-
-
-*/
