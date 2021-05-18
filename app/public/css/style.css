@@ -14,6 +14,7 @@ header {
 	margin: 0 auto;
 }
 
+
 nav {
 	position: absolute;
 	top: 5vh;
@@ -47,6 +48,12 @@ main {
 	border: double 5px;
 	width: 60vw;
 	height: 65vh;
+	margin: 0 auto;
+}
+#tela2 {
+	border: double 5px;
+	width: 60vw;
+	height: 118vh;
 	margin: 0 auto;
 }
 
