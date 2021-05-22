@@ -36,13 +36,13 @@
 
   <main>
 
-    <p class="nome">Diga seu nome: <input type="text"> <button id="button-iniciar" onclick="botaoIniciar()">Iniciar</button>
+    <p class="nome"> <button id="button-iniciar" onclick="botaoIniciar()">Iniciar</button>
     </p>
 
     <div id=tela>
       <section class="topo">
         <div class="Acertos">
-          <p>0 Pontos</p>
+          <p><span id="pontos">0</span> Pontos</p>
         </div>
 
         <div class="Palavra">
@@ -64,13 +64,13 @@
       <section class="base">
         <ul class="botoes">
           <li>
-            <button id="button-pular">Pular</button>
+            <button id="button-pular" onclick="botaoPular()">Pular</button>
           </li>
           <li>
             <p id="avisos">Você será o Palpiteiro!</p>
           </li>
           <li>
-            <button id="button-desistir">Desistir</button>
+            <button id="button-desistir" onclick="botaoDesistir()">Desistir</button>
           </li>
         </ul>
       </section>

@@ -125,17 +125,23 @@ var bancoPalavras = [
         'vince vader',
         'life lab']
 ]
+
+var semPalavras = false
+
 function sortearPalavra() {
     if (round < 1 || round > 4) {
         return 'round bugado!'
     }
-    var palavras = bancoPalavras(round - 1)
+    var palavras = bancoPalavras[round - 1]
     var i = Math.floor(Math.random() * palavras.length);
     var palavra = palavras[i];
     palavras.splice(i, 1);
 
     if (palavras.length == 0) {
         //acaba o round
+        $("#avisos").text("As palavras deste round acabaram!")
+        semPalavras = true
+        return ""
     }
     return palavra;
 }
@@ -145,17 +151,19 @@ function mostrarPalavra() {
 }
 
 function validarPalavra() {
-    if (palavra == $("#palpite").val()) {
+    if(semPalavras){
+        return
+    }
+    if ( $("#palavra").text() == $("#palpite").val()) {
         $("#avisos").text("Correto!")
         pontos++
-        setPontos()
+        $("#pontos").text(pontos)
         mostrarPalavra()
 
     }
     else {
         $("#avisos").text("Falso!")
-        pontos--
-        setPontos()
+        $("#pontos").text(pontos)
     }
 
 }

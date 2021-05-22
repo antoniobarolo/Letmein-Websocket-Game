@@ -32,6 +32,7 @@ function iniciarTempoEspera(tempo) {
 
 
 function iniciarTempoJogo(tempo) {
+    semPalavras = false
     $("#avisos").text('Rodada atual: ' + round)
     if (tempo >= 10) {
         $("#cronometro").text('00:' + tempo)
@@ -56,10 +57,4 @@ function FinalizarCronometro() {
     setInterval(2000)
     iniciarTempoEspera()
     */
-}
-
-function FinalizarJogo() {
-    $("#avisos").text('Jogo finalizado. Bom trabalho!')
-    JogoLigado = false;
-    //Método! passar os pontos pro leaderboard
 }

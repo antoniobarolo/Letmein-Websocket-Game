@@ -1,25 +1,24 @@
 class Jogador {
-    static jogadorMestre: Jogador;
-    static jogadorPalpiteiro: Jogador;
+    static jogadorMestre
+    static jogadorPalpiteiro
+    socket
+    tipo
 
-     socket: socketio.Socket;
-     mestre: boolean;
-     nome: string;
-
-     constructor(socket: socketio.Socket, mestre: boolean) {
+     constructor(socket, mestre) {
         this.socket = socket;
-        this.mestre = mestre;
+        this.tipo = tipo;
     }
 
-     static criarJogador(socket: socketio.Socket) {
+     static criarJogador(socket) {
         if (!this.jogadorMestre) {
-            this.jogadorMestre = new Jogador(socket, true);
+            this.jogadorMestre = new Jogador(socket, 1);
         }
         else if(!this.jogadorPalpiteiro) {
-            this.jogadorPalpiteiro = new Jogador(socket, false);
+            this.jogadorPalpiteiro = new Jogador(socket, 2);
         }
         else{
-            
+            this.jogadorPalpiteiro = new Jogador(socket, 3);
         }
+        montarTela(Jogador)
     }
 }

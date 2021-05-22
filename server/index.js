@@ -8,13 +8,7 @@ const io = require('socket.io')(http, {
 });
 
 io.on('connection', (socket) => {
-   users++
-   if(users ==1){
-   }
-   else if(users ==2){
-   }
-   else if(users >2){
-   }
+    //criarJogador(socket)
    
     console.log('a user connected');
 

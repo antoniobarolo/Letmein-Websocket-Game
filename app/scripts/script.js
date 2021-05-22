@@ -5,9 +5,24 @@ var papel;
 var jogoLigado = false;
 
 function montarTela(jogador){
-    //switch pra valor de variável jogador
+    switch (jogador.tipo) {
+        case 1:
+            $("body").html()
+          break
+        case 2:
+            $("body").html()
+          break
+        case 3:
+            $("body").html()
+          break
+        default:
+            $("body").html()
+      }
 }
 
-function setPontos(){
-    parseInt($("#pontos").text(pontos))
+
+function finalizarJogo() {
+    $("#avisos").text('Jogo finalizado. Bom trabalho!')
+    JogoLigado = false;
+    //Método! passar os pontos pro leaderboard
 }
