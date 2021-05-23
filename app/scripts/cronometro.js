@@ -1,60 +1,62 @@
-const constTempoEspera = 5;
-const constTempoRound = 12;
+const constTempoEspera = 6;
+const constTempoRound = 11;
 
+let tempoEspera = constTempoEspera
+let tempoRound = constTempoRound
 
 function proximoRound() {
+    round++
     if (round > 4) {
         finalizarJogo()
         return
     }
-    let tempoEspera = 5;
-    let tempoRound = 12;
-    setTimeout(iniciarTempoEspera(tempoEspera), 1000);
+    tempoEspera = constTempoEspera
+    tempoRound = constTempoRound
+    setTimeout(iniciarTempoEspera, 1000);
 }
 
-function iniciarTempoEspera(tempo) {
+function iniciarTempoEspera() {
     $("#avisos").text('Prepare-se!')
-    if (tempo >= 10) {
-        $("#cronometro").text('00:' + tempo)
+    if (tempoEspera > 10) {
+        $("#cronometro").text('00:' + (tempoEspera-1))
     }
     else {
-        $("#cronometro").text('00:0' + tempo)
+        $("#cronometro").text('00:0' + (tempoEspera-1))
     }
-    tempo--;
 
-    if (tempo <= 0) {
+    tempoEspera--
+
+    if (tempoEspera <= 0) {
         $("#cronometro").text('00:00')
-        setTimeout(iniciarTempoJogo(tempoRound), 1000)
+        mostrarPalavra()
+        setTimeout(iniciarTempoJogo, 1000)
     } else {
-        setTimeout(iniciarTempoEspera(tempoEspera), 1000)
+        setTimeout(iniciarTempoEspera, 1000)
     }
 }
 
 
-function iniciarTempoJogo(tempo) {
+function iniciarTempoJogo() {
     semPalavras = false
+    roundRolando = true
     $("#avisos").text('Rodada atual: ' + round)
-    if (tempo >= 10) {
-        $("#cronometro").text('00:' + tempo)
+    if (tempoRound > 10) {
+        $("#cronometro").text('00:' + (tempoRound-1))
     }
     else {
-        $("#cronometro").text('00:0' + tempo)
+        $("#cronometro").text('00:0' + (tempoRound-1))
     }
-    tempo--;
+    tempoRound--;
 
-    if (tempo <= 0) {
-        FinalizarCronometro()
+    if (tempoRound <= 0) {
+        roundRolando = false
+        return finalizarCronometro()
     } else {
-        setTimeout(iniciarTempoJogo(tempoRound), 1000)
+        setTimeout(iniciarTempoJogo, 1000)
     }
 }
 
-function FinalizarCronometro() {
-    $("body").css("background-color", "lightgray")
-    /*
-    round++
+function finalizarCronometro() {
     $("#avisos").text('O tempo acabou!')
-    setInterval(2000)
-    iniciarTempoEspera()
-    */
+    setInterval(proximoRound,2000)
 }

@@ -3,6 +3,7 @@ var round = 0;
 var nome1, nome2;
 var papel;
 var jogoLigado = false;
+var roundRolando = false;
 
 function montarTela(jogador){
     switch (jogador.tipo) {
@@ -24,5 +25,4 @@ function montarTela(jogador){
 function finalizarJogo() {
     $("#avisos").text('Jogo finalizado. Bom trabalho!')
     JogoLigado = false;
-    //Método! passar os pontos pro leaderboard
 }

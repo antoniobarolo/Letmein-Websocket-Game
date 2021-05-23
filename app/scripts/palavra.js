@@ -123,7 +123,9 @@ var bancoPalavras = [
         'humberto',
         'flávio',
         'vince vader',
-        'life lab']
+        'life lab',
+        'gamelab'
+        ]
 ]
 
 var semPalavras = false
