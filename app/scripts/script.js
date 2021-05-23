@@ -16,8 +16,6 @@ function montarTela(jogador){
         case 3:
             $("body").html()
           break
-        default:
-            $("body").html()
       }
 }
 

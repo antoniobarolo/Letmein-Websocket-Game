@@ -3,10 +3,10 @@ function botaoIniciar() {
     if (jogoLigado) {
         return
     }
-    if(!Jogador.jogadorMestre || !Jogador.jogadorMestre){
+  /*  if(!Jogador.jogadorMestre || !Jogador.jogadorMestre){
         console.log('a sala ainda não esta preenchida')
         return
-    }
+    }*/
     jogoLigado = true;
     proximoRound()
 }

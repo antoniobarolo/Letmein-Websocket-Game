@@ -133,7 +133,7 @@ var bancoPalavras = [
         'andré',
         'surjan',
         'surian',
-        'sandra'
+        'sandra',
         ]
 ]
 
