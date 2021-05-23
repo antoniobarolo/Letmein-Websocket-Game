@@ -124,7 +124,16 @@ var bancoPalavras = [
         'flávio',
         'vince vader',
         'life lab',
-        'gamelab'
+        'gamelab',
+        'espm júnior',
+        'marketing',
+        'jacarito',
+        'war vikings',
+        'smooh',
+        'andré',
+        'surjan',
+        'surian',
+        'sandra'
         ]
 ]
 
