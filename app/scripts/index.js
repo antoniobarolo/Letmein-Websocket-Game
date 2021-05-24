@@ -6,7 +6,7 @@ const io = require('socket.io')(http, {
 });
 
 io.on('connection', (socket) => {
-    criarJogador(socket)
+  //  criarJogador(socket)
    
     console.log('a user connected');
 
