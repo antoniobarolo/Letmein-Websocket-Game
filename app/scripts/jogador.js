@@ -15,10 +15,13 @@ class Jogador {
         }
         else if(!this.jogadorPalpiteiro) {
             this.jogadorPalpiteiro = new Jogador(socket, 2);
+            jogoLigado = true;
+            proximoRound()
         }
         else{
             this.jogadorPalpiteiro = new Jogador(socket, 3);
         }
-        montarTela(Jogador)
+
+       // montarTela(Jogador)
     }
 }

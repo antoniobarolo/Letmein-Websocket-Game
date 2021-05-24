@@ -58,5 +58,5 @@ function iniciarTempoJogo() {
 
 function finalizarCronometro() {
     $("#avisos").text('O tempo acabou!')
-    setInterval(proximoRound,2000)
+    setTimeout(proximoRound,2000)
 }
