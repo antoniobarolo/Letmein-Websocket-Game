@@ -36,7 +36,8 @@ var bancoPalavras = [
         'olho',
         'nariz',
         'ouvido',
-        'tênis'],
+        'tênis',
+        'garrafa'],
     palavras2 = [
         'sunga',
         'batata',
