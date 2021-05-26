@@ -127,5 +127,33 @@ nav a {
 	text-decoration: none;
 }
 
-
+.esperando{
+	height: 70vh;
+	margin: 0 auto;
+	padding-top: 25vh;
+	font-size: 400%;
+}
+.loader {
+	border: 16px solid white;
+	border-radius: 100%;
+	border-top: 16px solid gold;
+	width: 90px;
+	height: 90px;
+	-webkit-animation: spin 2s linear infinite; 
+	animation: spin 2s linear infinite;
+	float: right;
+	margin-right: 15%;
+	
+  }
+ 
+  /* Safari */
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
 
