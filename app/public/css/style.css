@@ -39,11 +39,6 @@ main {
 	text-align: center;
 }
 
-.nome{
-	color: cornflowerblue;
-	padding: 5px;
-}
-
 #tela {
 	border: double 5px;
 	width: 60vw;
