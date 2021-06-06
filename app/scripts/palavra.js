@@ -1,3 +1,6 @@
+var palavra
+var semPalavras = false
+
 var bancoPalavras = [
     palavras1 = [
         'casa',
@@ -251,7 +254,7 @@ var bancoPalavras = [
         'pochete',
         'violoncelo',
         'moinho',
-        'moela',
+        'melaço',
         'templário',
         'babuíno',
         'cucuia'],
@@ -273,47 +276,33 @@ var bancoPalavras = [
         'sandra',
         'rafa',
         'administração',
-        'ciências sociais e do consumo',
+        'ciso',
         'cinema e audiovisual',
         'design',
-        'design de moda',
         'jornalismo',
         'publicidade e propaganda',
         'relações internacionais',
-        'sistemas de informação',
+        'tech',
         'arenas',
         'atlética',
         'tv pixel',
         'grupo tangerina',
         'espm social',
         'overbite',
-        'centro acadêmico 4 de dezembro (CA4D)',
-        'diretório acadêmico guerreiro ramos (DAGR)',
-        'quadra',
+        'ca4d',
+        'dagr',
         'ludoteca',
-        'biblioteca',
-        'sala ps4',
         'sql',
         'phaser',
+        'data warehouse',
         'filósofo',
         'jesus',
         'ovelha',
-        'terraço',
-        'churrasco',
-        'vinho barolo',
         'bolo bruto',
-        'among us',
-        'tururu',
-        'jack black',
-        'ameno',
-        'mlp',
-        'jogo akinator',
         'sleepover',
         'cervejada'
-        ]
+    ]
 ]
-
-var semPalavras = false
 
 function sortearPalavra() {
     if (round < 1 || round > 4) {
@@ -323,7 +312,6 @@ function sortearPalavra() {
     var i = Math.floor(Math.random() * palavras.length);
     var palavra = palavras[i];
     palavras.splice(i, 1);
-
     if (palavras.length == 0) {
         //acaba o round
         $("#avisos").text("As palavras deste round acabaram!")
@@ -333,20 +321,40 @@ function sortearPalavra() {
     return palavra;
 }
 
+$("body").keypress(function (e) {
+    if (e.which == 13) {
+        enviarPalavra()
+    }
+});
+
 function mostrarPalavra() {
-    $("#palavra").text(sortearPalavra)
+    if (papel != 'mestre') {
+        return
+    }
+    palavra = sortearPalavra()
+    if (ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({
+            comando: 'mostrarPalavra',
+            palavra: palavra
+        }))
+    }
+    $("#palavra").text(palavra)
 }
 
 function validarPalavra() {
-    if(semPalavras){
+    if (papel != 'palpiteiro') {
         return
     }
-    if ( $("#palavra").text() == $("#palpite").val()) {
+    if (semPalavras) {
+        return
+    }
+    if (palavra == $("#send").val()) {
         $("#avisos").text("Correto!")
-        pontos++
-        $("#pontos").text(pontos)
-        mostrarPalavra()
-
+        if (ws.readyState === WebSocket.OPEN) {
+            ws.send(JSON.stringify({
+                comando: 'setPontos'
+            }))
+        }
     }
     else {
         $("#avisos").text("Falso!")

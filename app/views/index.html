@@ -1,27 +1,22 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-  <!-- jQuery -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-  <!-- Bootstrap 3 -->
-  <link rel="stylesheet" type="text/css"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../public/libs/jquery/jquery-3.5.1.min.js"></script>
+  <link rel='stylesheet' type='text/css'
+    href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' />
+  <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letmein!! - Palpiteiro</title>
+  <title>Letmein!!</title>
   <link rel="stylesheet" href="../public/css/style.css">
 
 </head>
 
 <body>
   <header>
-
     <div class="caixa">
       <h1><img src="../public/imagens/letmein.png" alt="letmein.png" height=100px></h1>
       <nav>
@@ -33,54 +28,14 @@
       </nav>
     </div>
   </header>
-
   <main>
-    <p id="avisos">Você será o Palpiteiro!</p>
-
     <div id=tela>
-      <section class="topo">
-        <div class="Acertos">
-          <p><span id="pontos"></span> Pontos</p>
-        </div>
-
-        <div class="Palavra">
-          <p id="palavra">Resposta ???</p>
-        </div>
-
-        <div class="Timer">
-          <p id="cronometro">Tempo</p>
-        </div>
+      <section class="esperando">
+        Esperando...
+        <div class="loader"></div>
       </section>
-
-      <section class="meio">
-
-        <input type="text" id="palpite" placeholder="Digite seu palpite"></input>
-        <input id="dica" placeholder="Dica da sua dupla" readonly="readonly"></input>
-
-      </section>
-
-      <section class="base">
-        <ul class="botoes">
-          <li>
-            <button id="button-pular" onclick="botaoPular()">Pular</button>
-          </li>
-          <li>
-            <button id="button-iniciar" onclick="botaoIniciar()">Iniciar</button>
-
-          </li>
-          <li>
-            <button id="button-desistir" onclick="botaoDesistir()">Desistir</button>
-          </li>
-        </ul>
-      </section>
-    </div>
     </div>
   </main>
-  <script type="text/javascript" src="../public/libs/jquery/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="../public/libs/socket.io/socket.io.min.js"></script>
-  <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
-  <script defer src="../app.js"></script>
-  <script src="../scripts/jogador.js"></script>
   <script src="../scripts/script.js"></script>
   <script src="../scripts/botoes.js"></script>
   <script src="../scripts/cronometro.js"></script>
