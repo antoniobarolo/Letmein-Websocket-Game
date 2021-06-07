@@ -345,6 +345,9 @@ function validarPalavra() {
     if (papel != 'palpiteiro') {
         return
     }
+    if (!roundRolando){
+        return
+    }
     if (semPalavras) {
         return
     }

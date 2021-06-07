@@ -1,7 +1,7 @@
 body {
 	background-color: black;
 	color: white;
-	background-image: url("../imagens/flaviodark.jpg");
+	background-image: url("../imagens/gif.gif");
 }
 
 header {
@@ -39,6 +39,12 @@ main {
 	font-size: 18px;
 	text-align: center;
 }
+
+.flavio{
+	background-image: url("../imagens/flaviodark.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
 
 #tela {
 	border: double 5px;
@@ -160,3 +166,5 @@ nav a {
 	  font-weight: bold;
 	  font-size: 24px;
   }
+
+ 
