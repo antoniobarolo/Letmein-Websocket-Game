@@ -1,6 +1,7 @@
 body {
 	background-color: black;
 	color: white;
+	background-image: url("../imagens/flaviodark.jpg");
 }
 
 header {
@@ -44,12 +45,14 @@ main {
 	width: 60vw;
 	height: 65vh;
 	margin: 0 auto;
+	background-color: black;
 }
 #tela2 {
 	border: double 5px;
 	width: 60vw;
 	height: 118vh;
 	margin: 0 auto;
+	background-color: black;
 }
 
 .topo {
@@ -152,3 +155,8 @@ nav a {
 	100% { transform: rotate(360deg); }
   }
 
+
+  #avisos{
+	  font-weight: bold;
+	  font-size: 24px;
+  }
