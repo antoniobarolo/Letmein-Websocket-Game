@@ -1,5 +1,5 @@
-const constTempoEspera = 6;
-const constTempoRound = 31;
+const constTempoEspera = 11;
+const constTempoRound = 101;
 
 let tempoEspera = constTempoEspera
 let tempoRound = constTempoRound
@@ -50,7 +50,13 @@ function iniciarTempoJogo() {
     semPalavras = false
     roundRolando = true
     $("#avisos").text('Rodada atual: ' + round)
-    if (tempoRound > 10) {
+    if (tempoRound > 70) {
+        $("#cronometro").text('01:' + (tempoRound - 61))
+    }
+    else if (tempoRound > 60) {
+        $("#cronometro").text('01:0' + (tempoRound - 61))
+    }
+    else if (tempoRound > 10) {
         $("#cronometro").text('00:' + (tempoRound - 1))
     }
     else {
