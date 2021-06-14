@@ -149,6 +149,18 @@ nav a {
 	margin-right: 15%;
 	
   }
+  .title{
+	text-align: center;
+	  font-size: 26px;  
+	  padding: 5vh;
+  }
+  .equipe{
+	  padding-top: 5vh;
+	  text-align: center;
+	  font-size: 22px;
+	  
+
+  }
  
   /* Safari */
   @-webkit-keyframes spin {
